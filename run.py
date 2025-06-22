@@ -91,7 +91,7 @@ def load_settings ():#line:128
     os .system ("cls")#line:129
     print("[1] Use Zero Recoil Jitter")
     print("[2] Make You're Own Jitter")
-    choice = input("Enter Your Choice Of Jitter_. ")
+    choice = input("\nEnter Your Choice Of Jitter_. ")
     os.system("cls")
     if choice == "1":
      return(20,20,20,24,0.0034)     
