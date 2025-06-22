@@ -134,7 +134,7 @@ def wait_for_controller ():#line:150
     clear_screen ()#line:159
     display_banner (move_right ,move_left ,move_up ,move_down )#line:160
     print (f"\n{LIGHT_WHITE}                   Works For {YELLOW}Xbox {LIGHT_WHITE}+ {LIGHT_PURPLE}Ps4/5                             {LIGHT_CYAN}LT + LR{LIGHT_WHITE} or {LIGHT_PURPLE}L1 + L2\033[0m")#line:161
-    print (f"\n{LIGHT_WHITE}                                                  Project By \033[1;32m@yyLevi\033[0m")#line:162
+    print (f"\n{LIGHT_WHITE}                                                 Project By \033[1;32m@yyLevi\033[0m")#line:162
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:163
     return O00OOO00OOO00OO00 #line:164
 try :#line:165
