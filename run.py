@@ -20,7 +20,7 @@ LIGHT_CYAN ="\033[1;36m"#line:19
 LIGHT_WHITE ="\033[1;37m"#line:20
 """Colors For Ui"""#line:21
 os .system ("cls")#line:22
-print (f"{LIGHT_PURPLE}A Reverse Engineered Script Taken + Edited By {LIGHT_WHITE}@Levi\033[0m")#line:23
+print (f"                                                                                               {LIGHT_PURPLE}By {LIGHT_WHITE}@Levi\033[0m")#line:23
 time .sleep (3.7 )#line:24
 os .system ("cls")#line:25
 time .sleep (0.001 )#line:42
@@ -46,13 +46,14 @@ loading ()#line:79
 os .system ('cls')#line:85
 def main2 ():#line:86
  for O0OOO00O00O00OO0O in range (2 ):#line:87
-  print (f"""  {LIGHT_PURPLE}                                                            
-          _____             _         _    _____                   _ 
-{LIGHT_CYAN}         |     |___ ___ ___| |_ ___ _| |  |  _  |___ ___ ___ ___ _| |
-{LIGHT_GREEN}         |   --|  _| .'|  _| '_| -_| . |  |     |_ -|  _| -_|   | . |
-{LIGHT_PURPLE}         |_____|_| |__,|___|_,_|___|___|  |__|__|___|___|___|_|_|___|""")#line:92
-  print (f"{LIGHT_WHITE}         @Levi\033[0m\n")#line:93
-  O000O0O0000OO0OOO =input (f"""{LIGHT_CYAN}['\033[0m{LIGHT_PURPLE}Enter Password To {LIGHT_CYAN}Access{LIGHT_PURPLE}:{LIGHT_GREEN} """)#line:94
+  print (fr"""  {LIGHT_BLUE}                                                            
+    ___    __                          
+   /   |  / /______  ______  ____  ___ 
+  / /| | / / ___/ / / / __ \/ __ \/ _ \
+ / ___ |/ / /__/ /_/ / /_/ / / / /  __/
+/_/  |_/_/\___/\__, /\____/_/ /_/\___/ 
+              /____/""")#line:92
+  O000O0O0000OO0OOO =input (f"""\n{LIGHT_CYAN}['\033[0m{LIGHT_PURPLE}Enter Password To {LIGHT_CYAN}Access{LIGHT_PURPLE}:{YELLOW} """)#line:94
   if O000O0O0000OO0OOO =="1":#line:95
     print ("")#line:96
     break #line:97
@@ -88,20 +89,33 @@ def center_text (O00O00O0O0000O00O ):#line:124
     return '\n'.join (OO0O000O0O0O000OO )#line:127
 def load_settings ():#line:128
     os .system ("cls")#line:129
-    print (f"{LIGHT_WHITE}Pick {LIGHT_PURPLE}Default {LIGHT_WHITE}[{LIGHT_CYAN}1{LIGHT_WHITE}] (INGORE THIS MIGHT BE USING THIS FOR NEAR FUTURE) ")#line:130
-    print (f"{LIGHT_WHITE}Pick {LIGHT_WHITE}[{LIGHT_CYAN}2{LIGHT_WHITE}] {LIGHT_PURPLE}original jitter {LIGHT_WHITE}+ {LIGHT_CYAN}edited Time_Sleep\033[0m")#line:131
-    O0O0O0OO0O0O00O0O =input (f"{LIGHT_WHITE}What Jitter Setting, {LIGHT_PURPLE}Do You Want To Use{LIGHT_PURPLE}:{LIGHT_CYAN}= {LIGHT_CYAN}")#line:132
-    if O0O0O0OO0O0O00O0O =="1":#line:133
-       return (24 ,24 ,24 ,28 ,0.01 )#line:134
-    else :#line:135
-       return (20 ,20 ,20 ,24 ,0.0034 )#line:136
+    print("[1] Use Zero Recoil Jitter")
+    print("[2] Make You're Own Jitter")
+    choice = input("Enter Your Choice Of Jitter_. ")
+    os.system("cls")
+    if choice == "1":
+     return(20,20,20,24,0.0034)     
+    else: 
+     while True:
+      try:
+       move_up = float(input("enter any number to move the mouse up etc. 20: You're Choice "))
+       move_left = float(input("enter any number to move the mouse left etc. 20: You're Choice ")) 
+       move_right = float(input("enter any number to move the mouse right etc. 20: You're Choice "))
+       move_down = float(input("enter any number to move the mouse down etc. 24: You're Choice "))
+       time_sleep = float(input("enter the speed of how fast the jitter goes, etc. 0.004: You're Choice "))
+       return move_up, move_left, move_right, move_down, time_sleep
+      except ValueError:
+         print("Please, Enter 2 Digit Numbers: ")
+         time.sleep(1.2)
+         os.system("cls")
 def display_banner (O0OOOOOOO00O00OOO ,O0O00OOO0OOOO00OO ,O00O00000O0O00000 ,O0OO000OOO0000000 ):#line:137
-  print (f"""  {LIGHT_PURPLE}                                                            
-          _____             _         _    _____                   _ 
-{LIGHT_CYAN}         |     |___ ___ ___| |_ ___ _| |  |  _  |___ ___ ___ ___ _| |
-{LIGHT_GREEN}         |   --|  _| .'|  _| '_| -_| . |  |     |_ -|  _| -_|   | . |
-{LIGHT_PURPLE}         |_____|_| |__,|___|_,_|___|___|  |__|__|___|___|___|_|_|___|""")#line:142
-  print (f"{LIGHT_WHITE}         @Levi\033[0m\n")#line:143
+  print (fr"""  {LIGHT_BLUE}                                                            
+                                         ___    __                          
+                                        /   |  / /______  ______  ____  ___ 
+                                       / /| | / / ___/ / / / __ \/ __ \/ _ \
+                                      / ___ |/ / /__/ /_/ / /_/ / / / /  __/
+                                     /_/  |_/_/\___/\__, /\____/_/ /_/\___/ 
+                                                   /____/ """)#line:142
 def mouse_motion ():#line:144
     win32api .mouse_event (win32con .MOUSEEVENTF_MOVE ,move_right ,move_down ,29 ,29 ,)#line:145
     time .sleep (0.0037 )#line:146
@@ -120,8 +134,8 @@ def wait_for_controller ():#line:150
     clear_screen ()#line:159
     display_banner (move_right ,move_left ,move_up ,move_down )#line:160
     print (f"\n{LIGHT_WHITE}                   Works For {YELLOW}Xbox {LIGHT_WHITE}+ {LIGHT_PURPLE}Ps4/5                             {LIGHT_CYAN}LT + LR{LIGHT_WHITE} or {LIGHT_PURPLE}L1 + L2\033[0m")#line:161
-    print (f"\n{LIGHT_WHITE}                                            Project By \033[1;32m@Levi\033[0m")#line:162
-    print (f"                                                ['{LIGHT_PURPLE}Jitter Activated'\033[0m]")#line:163
+    print (f"\n{LIGHT_WHITE}                                                 Project By \033[1;32m@Levi\033[0m")#line:162
+    print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:163
     return O00OOO00OOO00OO00 #line:164
 try :#line:165
  move_right ,move_left ,move_up ,move_down ,time_sleep =load_settings ()#line:166
