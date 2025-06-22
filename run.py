@@ -117,9 +117,9 @@ def display_banner (O0OOOOOOO00O00OOO ,O0O00OOO0OOOO00OO ,O00O00000O0O00000 ,O0O
                                      /_/  |_/_/\___/\__, /\____/_/ /_/\___/ 
                                                    /____/ """)#line:142
 def mouse_motion ():#line:144
-    win32api .mouse_event (win32con .MOUSEEVENTF_MOVE, -int(move_right) -int(move_down) ,29 ,29 ,)#line:145
+    win32api .mouse_event (win32con .MOUSEEVENTF_MOVE, int(move_right) ,int(move_down), 29 ,29 )#line:145
     time .sleep (0.0037 )#line:146
-    win32api .mouse_event (win32con .MOUSEEVENTF_MOVE, -int(move_left) -int(move_up) ,-29 ,-29 )#line:147
+    win32api .mouse_event (win32con .MOUSEEVENTF_MOVE, int(-move_left), int(-move_up) ,-29 ,-29 )#line:147
 def monitor_settings (O0O0OO00O0OO00OOO ):#line:148
     return O0O0OO00O0OO00OOO #line:149
 def wait_for_controller ():#line:150
