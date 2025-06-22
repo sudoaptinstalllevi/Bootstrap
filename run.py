@@ -20,7 +20,7 @@ LIGHT_CYAN ="\033[1;36m"#line:19
 LIGHT_WHITE ="\033[1;37m"#line:20
 """Colors For Ui"""#line:21
 os .system ("cls")#line:22
-print (f"                                                                                               {LIGHT_PURPLE}By {LIGHT_WHITE}@Levi\033[0m")#line:23
+print (f"{LIGHT_PURPLE}By {LIGHT_WHITE}@Levi\033[0m")#line:23
 time .sleep (3.7 )#line:24
 os .system ("cls")#line:25
 time .sleep (0.001 )#line:42
