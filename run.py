@@ -95,7 +95,7 @@ def load_settings ():#line:128
     print(f"{LIGHT_GREEN}[2] Enter You're Own Jitter With No .TXT")
     print(f"{LIGHT_PURPLE}[3] Put You're Jitter File Here To Use")
     print(f"{LIGHT_CYAN}[4] Example How To Make You're Own Jitter")
-    choice = input(f"\n{YELLOW}Enter Your Choice Of Jitter_. ")
+    choice = input(f"\n{PURPLE}Enter Your Choice Of Jitter_. ")
     os.system("cls")
     if choice == "1":
      return(20,20,20,24,0.004)     
