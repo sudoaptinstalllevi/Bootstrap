@@ -1,6 +1,8 @@
 import os #line:1
 import time #line:2
 import sys #line:3
+import pyautogui
+import ctypes
 """Colors For Ui"""#line:4
 BLACK ="\033[0;30m"#line:5
 RED ="\033[0;31m"#line:6
@@ -90,12 +92,32 @@ def center_text (O00O00O0O0000O00O ):#line:124
 def load_settings ():#line:128
     os .system ("cls")#line:129
     print("[1] Use Zero Recoil Jitter")
-    print("[2] Make You're Own Jitter")
+    print("[2] Enter You're Own Jitter With No .TXT")
+    print("[3] Put You're Jitter File Here To Use")
+    print("[4] Example How To Make You're Own Jitter")
     choice = input("\nEnter Your Choice Of Jitter_. ")
     os.system("cls")
     if choice == "1":
-     return(20,20,20,24,0.0034)     
-    else: 
+     return(20,20,20,24,0.004)     
+    elif choice == "3":
+     try:
+      with open("jitter.txt", "r") as file:
+        read = file.read().split(",")
+        return tuple(map(float, read))
+     except:
+      pass
+      return load_settings()
+    elif choice == "4":
+     pyautogui.press("win")
+     pyautogui.write("notepad")
+     time.sleep(0.6)
+     pyautogui.press("enter")
+     time.sleep(2.4)
+     pyautogui.write("20,20,20,24,0.004")
+     time.sleep(0.55)
+     ctypes.windll.user32.MessageBoxW(0, "Name Of .TXT Must Be, jitter.txt To Be Able To Run", "jitter.txt", 0)
+     return load_settings()
+    elif choice == "2":
      while True:
       try:
        move_up = float(input("enter any number to move the mouse up etc. 20: You're Choice "))
@@ -105,9 +127,10 @@ def load_settings ():#line:128
        time_sleep = float(input("enter the speed of how fast the jitter goes, etc. 0.004: You're Choice "))
        return move_up, move_left, move_right, move_down, time_sleep
       except ValueError:
-         print("Please, Enter 2 Digit Numbers: ")
+         print("restarting wrong input.")
          time.sleep(1.2)
          os.system("cls")
+
 def display_banner (O0OOOOOOO00O00OOO ,O0O00OOO0OOOO00OO ,O00O00000O0O00000 ,O0OO000OOO0000000 ):#line:137
   print (fr"""  {LIGHT_BLUE}                                                            
                                          ___    __                          
