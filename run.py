@@ -175,7 +175,7 @@ try :#line:165
         pygame .quit ()#line:177
         exit ()#line:178
     aim =controller .get_axis (4 )#line:179
-    shoot =controller .get_axis (5 )#line:180
+    shoot =controller .get_axis (4 )#line:180
     if aim >0.0 and shoot >0.0 :#line:181
         mouse_motion ()#line:182
     if int (time .time ())%2 ==0 :#line:183
