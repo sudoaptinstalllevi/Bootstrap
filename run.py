@@ -98,7 +98,7 @@ def load_settings ():#line:128
     choice = input(f"\n{PURPLE}Enter Your Choice Of Jitter_. ")
     os.system("cls")
     if choice == "1":
-     return(20,20,20,24,0.004)     
+     return(20,20,20,20,0.0034)     
     elif choice == "3":
      try:
       with open("jitter.txt", "r") as file:
