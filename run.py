@@ -186,5 +186,4 @@ try :#line:165
             display_banner (move_right ,move_left ,move_up ,move_down )#line:188
     time .sleep (time_sleep )#line:189
 except KeyboardInterrupt :#line:190
- time.sleep(0.99)
- pyautogui.write("exit")
+   print(f"{LIGHT_PURPLE}Dickhead Detected")
