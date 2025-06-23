@@ -91,11 +91,11 @@ def center_text (O00O00O0O0000O00O ):#line:124
     return '\n'.join (OO0O000O0O0O000OO )#line:127
 def load_settings ():#line:128
     os .system ("cls")#line:129
-    print("[1] Use Zero Recoil Jitter")
-    print("[2] Enter You're Own Jitter With No .TXT")
-    print("[3] Put You're Jitter File Here To Use")
-    print("[4] Example How To Make You're Own Jitter")
-    choice = input("\nEnter Your Choice Of Jitter_. ")
+    print(f"{LIGHT_BLUE}[1] Use Zero Recoil Jitter")
+    print(f"{LIGHT_GREEN}[2] Enter You're Own Jitter With No .TXT")
+    print(f"{LIGHT_PURPLE}[3] Put You're Jitter File Here To Use")
+    print(f"{LIGHT_CYAN}[4] Example How To Make You're Own Jitter")
+    choice = input(f"\n{YELLOW}Enter Your Choice Of Jitter_. ")
     os.system("cls")
     if choice == "1":
      return(20,20,20,24,0.004)     
@@ -120,11 +120,11 @@ def load_settings ():#line:128
     elif choice == "2":
      while True:
       try:
-       move_up = float(input("enter any number to move the mouse up etc. 20: You're Choice "))
-       move_left = float(input("enter any number to move the mouse left etc. 20: You're Choice ")) 
-       move_right = float(input("enter any number to move the mouse right etc. 20: You're Choice "))
-       move_down = float(input("enter any number to move the mouse down etc. 24: You're Choice "))
-       time_sleep = float(input("enter the speed of how fast the jitter goes, etc. 0.004: You're Choice "))
+       move_up = float(input(f"{LIGHT_BLUE}enter any number to move the mouse up etc. 20: You're Choice "))
+       move_left = float(input(f"{LIGHT_GREEN}enter any number to move the mouse left etc. 20: You're Choice ")) 
+       move_right = float(input(f"{LIGHT_PURPLE}enter any number to move the mouse right etc. 20: You're Choice "))
+       move_down = float(input(f"{LIGHT_CYAN}enter any number to move the mouse down etc. 24: You're Choice "))
+       time_sleep = float(input(f"{YELLOW}enter the speed of how fast the jitter goes, etc. 0.004: You're Choice "))
        return move_up, move_left, move_right, move_down, time_sleep
       except ValueError:
          print("restarting wrong input.")
