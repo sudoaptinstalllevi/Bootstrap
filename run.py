@@ -92,8 +92,8 @@ def center_text (O00O00O0O0000O00O ):#line:124
 def load_settings ():#line:128
     os .system ("cls")#line:129
     print(f"{LIGHT_BLUE}[1] Default Jitter")
-    print(f"{LIGHT_GREEN}[2] Enter You're Own Jitter With No .TXT")
-    print(f"{LIGHT_PURPLE}[3] Put You're Jitter File Here To Use")
+    print(f"{LIGHT_GREEN}[2] Make Your Own Jitter")
+    print(f"{LIGHT_PURPLE}[3] Use Your jitter.txt")
     print(f"{LIGHT_CYAN}[4] Example How To Make You're Own Jitter")
     choice = input(f"\n{PURPLE}Enter Your Choice Of Jitter_. ")
     os.system("cls")
