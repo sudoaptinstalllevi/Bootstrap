@@ -3,7 +3,7 @@ import os
 os.system("sudo airmon-ng start wlan0")
 interface = input("enter your interface: ")
 ent_ch = input("enter your network channel: ")
-os.system(f"iwconfig {interface} channel {ent_ch}")
+os.system(f"sudo iwconfig {interface} channel {ent_ch}")
 try: 
   os.system("cls")
   enter_mac_address = input("enter the ap of the router: ")
