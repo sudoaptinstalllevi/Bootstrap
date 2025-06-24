@@ -4,10 +4,12 @@ import win32con
 import time
 import threading
 import pyautogui
+import os 
+os .environ ['PYGAME_HIDE_SUPPORT_PROMPT']='1'
 import pygame
 import ctypes
-import os 
 
+os.system("cls")
 os.system("pip install customtkinter >nul 2>&1")
 
 customtkinter.set_appearance_mode("dark")
