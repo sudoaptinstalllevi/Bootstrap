@@ -22,7 +22,7 @@ app.title("Bootstrap")
 move_up_var = customtkinter.StringVar(value="20")
 move_left_var = customtkinter.StringVar(value="20")
 move_right_var = customtkinter.StringVar(value="20")
-move_down_var = customtkinter.StringVar(value="24")
+move_down_var = customtkinter.StringVar(value="20")
 time_sleep_var = customtkinter.StringVar(value="0.0034")
 
 controller = None
