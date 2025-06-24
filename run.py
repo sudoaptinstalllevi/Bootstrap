@@ -138,7 +138,7 @@ customtkinter.CTkEntry(app, textvariable=time_sleep_var).pack()
 customtkinter.CTkButton(app, text="Use Default Jitter", command=default).pack(pady=7)
 
 customtkinter.CTkButton(app, text="Load from jitter.txt", command=load_from_file).pack(pady=7)
-customtkinter.CTkButton(app, text="Open Notepad Example", command=save_example_file).pack(pady=7)
+customtkinter.CTkButton(app, text="Make a jitter.txt Example", command=save_example_file).pack(pady=7)
 
 def start_jitter_thread():
     threading.Thread(target=start_jitter_logic, daemon=True).start()
