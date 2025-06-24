@@ -113,7 +113,7 @@ def load_settings ():#line:128
      time.sleep(0.6)
      pyautogui.press("enter")
      time.sleep(2.4)
-     pyautogui.write("20,20,20,24,0.004")
+     pyautogui.write("20,20,20,24,0.0034")
      time.sleep(0.55)
      ctypes.windll.user32.MessageBoxW(0, "Name Of .TXT Must Be, jitter.txt To Be Able To Run", "jitter.txt", 0)
      return load_settings()
