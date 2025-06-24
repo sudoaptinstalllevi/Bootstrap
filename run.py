@@ -13,7 +13,7 @@ os.system("cls")
 os.system("pip install customtkinter >nul 2>&1")
 
 customtkinter.set_appearance_mode("dark")
-customtkinter.set_default_color_theme("green")
+customtkinter.set_default_color_theme("dark-blue")
 
 app = customtkinter.CTk()
 app.geometry("800x465")
