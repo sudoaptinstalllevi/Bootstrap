@@ -112,7 +112,14 @@ def save_example_file():
     time.sleep(0.5)
     ctypes.windll.user32.MessageBoxW(0, "Name the file 'jitter.txt' to be able to run it later.", "jitter.txt", 0)
 
-# UI Layout
+
+def default():
+    move_up_var.set(20)
+    move_right_var.set(20)
+    move_left_var.set(20)
+    move_down_var.set(24)
+    time_sleep_var.set(0.0034)
+
 customtkinter.CTkLabel(app, text="Move Up").pack(pady=2)
 customtkinter.CTkEntry(app, textvariable=move_up_var).pack()
 
@@ -128,8 +135,10 @@ customtkinter.CTkEntry(app, textvariable=move_down_var).pack()
 customtkinter.CTkLabel(app, text="Jitter Speed").pack(pady=2)
 customtkinter.CTkEntry(app, textvariable=time_sleep_var).pack()
 
-customtkinter.CTkButton(app, text="Load from jitter.txt", command=load_from_file).pack(pady=3)
-customtkinter.CTkButton(app, text="Open Notepad Example", command=save_example_file).pack(pady=3)
+customtkinter.CTkButton(app, text="Use Default Jitter", command=default).pack(pady=7)
+
+customtkinter.CTkButton(app, text="Load from jitter.txt", command=load_from_file).pack(pady=7)
+customtkinter.CTkButton(app, text="Open Notepad Example", command=save_example_file).pack(pady=7)
 
 def start_jitter_thread():
     threading.Thread(target=start_jitter_logic, daemon=True).start()
