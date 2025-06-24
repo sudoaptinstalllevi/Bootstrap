@@ -1,7 +1,5 @@
 import os 
 interface = "wlan0"
-os.system(f"sudo airmon-ng start {interface}")
-os.system("sudo airmon-ng check kill")
 ent_ch = input("enter your network channel: ")
 os.system(f"sudo iwconfig {interface} channel {ent_ch}")
 try: 
