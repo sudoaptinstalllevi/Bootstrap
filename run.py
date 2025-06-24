@@ -117,7 +117,7 @@ def default():
     move_up_var.set(20)
     move_right_var.set(20)
     move_left_var.set(20)
-    move_down_var.set(24)
+    move_down_var.set(20)
     time_sleep_var.set(0.0034)
 
 customtkinter.CTkLabel(app, text="Move Up").pack(pady=2)
