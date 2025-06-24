@@ -26,7 +26,7 @@ move_down_var = customtkinter.StringVar(value="24")
 time_sleep_var = customtkinter.StringVar(value="0.0034")
 
 controller = None
-jitter_active = True  # ✅ Auto-start jitter
+jitter_active = True  
 
 def mouse_motion():
     try:
