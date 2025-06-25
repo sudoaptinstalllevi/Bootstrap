@@ -22,7 +22,7 @@ LIGHT_CYAN ="\033[1;36m"#line:19
 LIGHT_WHITE ="\033[1;37m"#line:20
 """Colors For Ui"""#line:21
 os .system ("cls")#line:22
-print (f"{LIGHT_PURPLE}By {LIGHT_WHITE}@yyLevi\033[0m")#line:23
+print (f"{LIGHT_WHITE}By {LIGHT_BLUE}@yyLevi\033[0m")#line:23
 time .sleep (3.7 )#line:24
 os .system ("cls")#line:25
 time .sleep (0.001 )#line:42
@@ -64,14 +64,14 @@ def main2 ():#line:86
     print (f"{LIGHT_CYAN}Wrong Password, \033[0m{LIGHT_WHITE}['{LIGHT_PURPLE}{1 - O0OOO00O00O00OO0O}{LIGHT_WHITE}'] \033[0m{LIGHT_PURPLE}Attempts Left Untill Exiting, Cracked Ascend")#line:100
  else :#line:101
     os .system ("cls")#line:102
-    print (f"""{LIGHT_GREEN}                     
+    print (f"""{LIGHT_PURPLE}                     
  _       _               
 | |_ _ _| |_ ___ _ _ ___ 
-{LIGHT_CYAN}| . | | | . | -_| | | -_|
-{LIGHT_PURPLE}|___|___|___|___|_  |___|
+| . | | | . | -_| | | -_|
+|___|___|___|___|_  |___|
                 |___|    
 
-{LIGHT_WHITE}Used All Password Attempts...\n""")#line:110
+{LIGHT_BLUE}Used All Password Attempts...\n\033[0m""")#line:110
     time .sleep (2.1 )#line:111
     O000O0O0000OO0OOO =quit (os.system("cls"))
 main2 ()#line:113
