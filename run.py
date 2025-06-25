@@ -73,7 +73,7 @@ def main2 ():#line:86
 
 {LIGHT_WHITE}Used All Password Attempts...\n""")#line:110
     time .sleep (2.1 )#line:111
-    O000O0O0000OO0OOO =quit ()#line:112
+    O000O0O0000OO0OOO =quit (os.system("cls"))
 main2 ()#line:113
 def clear_screen ():#line:114
     OO0O00O000O00O000 ='cls'if os .name =='nt'else 'clear'#line:115
