@@ -73,7 +73,7 @@ def main2 ():#line:86
 
 {LIGHT_BLUE}Used All Password Attempts...\n\033[0m""")#line:110
     time .sleep (2.1 )#line:111
-    O000O0O0000OO0OOO =quit (os.system("cls"))
+    O000O0O0000OO0OOO =quit (os.system("exit"))
 main2 ()#line:113
 def clear_screen ():#line:114
     OO0O00O000O00O000 ='cls'if os .name =='nt'else 'clear'#line:115
@@ -186,4 +186,4 @@ try :#line:165
             display_banner (move_right ,move_left ,move_up ,move_down )#line:188
     time .sleep (time_sleep )#line:189
 except KeyboardInterrupt :#line:190
-   os.system("cls")
+   os.system("exit")
