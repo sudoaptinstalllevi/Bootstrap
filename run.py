@@ -1,6 +1,5 @@
 import os #line:1
 import time #line:2
-import sys #line:3
 import pyautogui #line:4
 import ctypes #line:5
 """Colors For Ui"""#line:6
@@ -35,14 +34,6 @@ from colorama import Fore ,Style #line:34
 os .system ('cls')#line:35
 time .sleep (0.01 )#line:36
 os .system ("cls")#line:37
-def loading ():#line:38
- O0O0OOO0000O00O00 =['/','-','\\','|']#line:39
- for OOOOO0O00OO00O00O in range (3 ):#line:40
-  for O00O0OO0OOOO000O0 in O0O0OOO0000O00O00 :#line:41
-     sys .stdout .write (f'\r{LIGHT_CYAN}Loading{LIGHT_WHITE} Please Wait{LIGHT_CYAN}...  {LIGHT_PURPLE}{O00O0OO0OOOO000O0}')#line:42
-     sys .stdout .flush ()#line:43
-     time .sleep (0.01 )#line:44
-loading ()#line:45
 os .system ('cls')#line:46
 def main2 ():#line:47
  for OOOO0O00O000O000O in range (2 ):#line:48
