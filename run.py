@@ -23,7 +23,7 @@ LIGHT_WHITE ="\033[1;37m"#line:20
 """Colors For Ui"""#line:21
 os .system ("cls")#line:22
 print (f"{LIGHT_WHITE}By {LIGHT_BLUE}@yyLevi\033[0m")#line:23
-time .sleep (3.7 )#line:24
+time .sleep (2.8 )#line:24
 os .system ("cls")#line:25
 time .sleep (0.001 )#line:42
 import os #line:43
@@ -73,7 +73,8 @@ def main2 ():#line:86
 
 {LIGHT_BLUE}Used All Password Attempts...\n\033[0m""")#line:110
     time .sleep (2.1 )#line:111
-    O000O0O0000OO0OOO =quit (os.system("exit"))
+    O000O0O0000OO0OOO =quit (pyautogui.write("exit"), pyautogui.press("enter"))
+    
 main2 ()#line:113
 def clear_screen ():#line:114
     OO0O00O000O00O000 ='cls'if os .name =='nt'else 'clear'#line:115
@@ -186,4 +187,5 @@ try :#line:165
             display_banner (move_right ,move_left ,move_up ,move_down )#line:188
     time .sleep (time_sleep )#line:189
 except KeyboardInterrupt :#line:190
-   os.system("exit")
+ time.sleep(0.6)
+ os.system("exit")
