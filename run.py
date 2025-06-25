@@ -56,7 +56,7 @@ def main2 ():#line:86
 /_/  |_/_/\___/\__, /\____/_/ /_/\___/ 
               /____/""")#line:92
   O000O0O0000OO0OOO =input (f"""\n{LIGHT_CYAN}['\033[0m{LIGHT_PURPLE}Enter Password To {LIGHT_CYAN}Access{LIGHT_PURPLE}:{YELLOW} """)#line:94
-  if O000O0O0000OO0OOO =="1":#line:95
+  if O000O0O0000OO0OOO =="squ":#line:95
     print ("")#line:96
     break #line:97
   else :#line:98
