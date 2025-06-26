@@ -155,14 +155,16 @@ try :#line:164
  pygame .init ()#line:167
  pygame .joystick .init ()#line:168
  controller =wait_for_controller ()#line:169
+ 
+ response_time = 0.003
  while True :#line:170
     for event in pygame .event .get ():#line:171
       if pygame .joystick .get_count () > 0 :#line:175
        aim =controller .get_axis (4 )#line:178
        shoot =controller .get_axis (4 )#line:179
-       if aim >0.0 and shoot >0.0 :#line:180
+       if aim >0.0 and shoot > DEADZONE :#line:180
         controller_call ()#line:181
-       if int (time .time ())%0.5 ==0 :#line:182
+       if int (time .time ()) > 0 :#line:182
         updated_settings =monitor_settings (current_settings )#line:183
        if updated_settings !=current_settings :#line:184
             move_right ,move_left ,move_up ,move_down =updated_settings #line:185
