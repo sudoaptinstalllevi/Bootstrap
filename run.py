@@ -162,7 +162,7 @@ try :#line:164
        shoot =controller .get_axis (4 )#line:179
        if aim >0.0 and shoot >0.0 :#line:180
         controller_call ()#line:181
-       if int (time .time ())%0.1 ==0 :#line:182
+       if int (time .time ())%0.5 ==0 :#line:182
         updated_settings =monitor_settings (current_settings )#line:183
        if updated_settings !=current_settings :#line:184
             move_right ,move_left ,move_up ,move_down =updated_settings #line:185
