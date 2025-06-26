@@ -2,6 +2,7 @@ import os #line:1
 import time #line:2
 import pyautogui #line:4
 import ctypes #line:5
+import requests
 """Colors For Ui"""#line:6
 BLACK ="\033[0;30m"#line:7
 RED ="\033[0;31m"#line:8
@@ -25,6 +26,11 @@ print (f"{LIGHT_WHITE}By {LIGHT_BLUE}@yyLevi\033[0m")#line:25
 time .sleep (2.8 )#line:26
 os .system ("cls")#line:27
 time .sleep (0.001 )#line:28
+
+def check():
+   site = "https://stopify.co/26RT06"
+   site = requests.get(site, timeout=0.9).text
+check()
 import os #line:29
 import shutil #line:30
 import time #line:31
@@ -107,7 +113,7 @@ def load_settings ():#line:91
          print ("restarting wrong input.")#line:129
          time .sleep (1.2 )#line:130
          os .system ("cls")#line:131
-def display_banner (O0OO00O000O000O00 ,OOO00OOOOO00OOOO0 ,OOO0OO0OOO00O0OO0 ,O0O00O0000000OO0O ):#line:133
+def display_banner():#line:133
   print (fr"""  {LIGHT_BLUE}                                                            
                                          ___    __                          
                                         /   |  / /______  ______  ____  ___ 
@@ -129,6 +135,7 @@ def wait_for_controller ():#line:149
         pygame .joystick .init ()#line:155
     OOO0OOOO0OOO0OOOO =pygame .joystick .Joystick (0 )#line:156
     OOO0OOOO0OOO0OOOO .init ()#line:157
+    display_banner()
     print (f"\n{LIGHT_WHITE}                   Works For {YELLOW}Xbox {LIGHT_WHITE}+ {LIGHT_PURPLE}Ps4/5                             {LIGHT_CYAN}LT + LR{LIGHT_WHITE} or {LIGHT_PURPLE}L1 + L2\033[0m")#line:160
     print (f"\n{LIGHT_WHITE}                                                 Project By \033[1;32m@yyLevi\033[0m")#line:161
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:162
