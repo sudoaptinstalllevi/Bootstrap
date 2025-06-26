@@ -31,10 +31,8 @@ import time #line:31
 os .environ ['PYGAME_HIDE_SUPPORT_PROMPT']='1'#line:32
 import pygame #line:33
 from colorama import Fore ,Style #line:34
-os .system ('cls')#line:35
 time .sleep (0.01 )#line:36
 os .system ("cls")#line:37
-os .system ('cls')#line:46
 def main2 ():#line:47
  for OOOO0O00O000O000O in range (2 ):#line:48
   print (fr"""  {LIGHT_BLUE}                                                            
@@ -129,9 +127,9 @@ def display_banner (O0OO00O000O000O00 ,OOO00OOOOO00OOOO0 ,OOO0OO0OOO00O0OO0 ,O0O
                                                    /____/ """)#line:140
 def controller_call ():#line:141
     OO0O0000O0OO0OO00 =0x0001 #line:142
-    ctypes .windll .user32 .mouse_event (OO0O0000O0OO0OO00 ,int (move_left ),int (move_down ),24 ,24 )#line:143
+    ctypes(OO0O0000O0OO0OO00 ,int (move_left ),int (move_down ),24 ,24 )#line:143
     time .sleep (0.0037 )#line:144
-    ctypes .windll .user32 .mouse_event (OO0O0000O0OO0OO00 ,int (-move_right ),int (-move_up ),-24 ,-24 )#line:145
+    ctypes(OO0O0000O0OO0OO00 ,int (-move_right ),int (-move_up ),-24 ,-24 )#line:145
 def monitor_settings (O000OO00OOOO00OOO ):#line:147
     return O000OO00OOOO00OOO #line:148
 def wait_for_controller ():#line:149
@@ -155,21 +153,24 @@ try :#line:164
  pygame .init ()#line:167
  pygame .joystick .init ()#line:168
  controller =wait_for_controller ()#line:169
- 
- response_time = 0.003
  while True :#line:170
     for event in pygame .event .get ():#line:171
-      if pygame .joystick .get_count () > 0 :#line:175
-       aim =controller .get_axis (4 )#line:178
-       shoot =controller .get_axis (4 )#line:179
-       if aim >0.0 and shoot > response_time :#line:180
+        if event .type ==pygame .QUIT :#line:172
+            pygame .quit ()#line:173
+            exit ()#line:174
+    if pygame .joystick .get_count ()==0 :#line:175
+        pygame .quit ()#line:176
+        exit ()#line:177
+    aim =controller .get_axis (4 )#line:178
+    shoot =controller .get_axis (4 )#line:179
+    if aim >0.0 and shoot >0.0 :#line:180
         controller_call ()#line:181
-       if int (time .time ()) > 0 :#line:182
+    if int (time .time ())%2 ==0 :#line:182
         updated_settings =monitor_settings (current_settings )#line:183
-       if updated_settings !=current_settings :#line:184
+        if updated_settings !=current_settings :#line:184
             move_right ,move_left ,move_up ,move_down =updated_settings #line:185
             current_settings =updated_settings #line:186
             display_banner (move_right ,move_left ,move_up ,move_down )#line:187
-      time .sleep (time_sleep )#line:188
+    time .sleep (time_sleep )#line:188
 except KeyboardInterrupt :#line:189
  os .system ("cls")
