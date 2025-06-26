@@ -30,7 +30,6 @@ import shutil #line:30
 import time #line:31
 os .environ ['PYGAME_HIDE_SUPPORT_PROMPT']='1'#line:32
 import pygame #line:33
-from colorama import Fore ,Style #line:34
 time .sleep (0.01 )#line:36
 os .system ("cls")#line:37
 def main2 ():#line:47
@@ -67,15 +66,6 @@ def clear_screen ():#line:77
     os .system (O0OO00O00OOO0O00O )#line:79
 def get_terminal_width ():#line:80
     return shutil .get_terminal_size ().columns #line:81
-def color_text (O00O0000000O0O0OO ,color =Fore .WHITE ):#line:82
-    O00O0000000OO0OOO =O00O0000000O0O0OO .split ('\n')#line:83
-    OO0O0000OOOO00OOO =get_terminal_width ()#line:84
-    OO00000O0OOO0O000 =[color +O0O0O0O0OO0000O00 .center (OO0O0000OOOO00OOO )+Style .RESET_ALL for O0O0O0O0OO0000O00 in O00O0000000OO0OOO ]#line:85
-    return '\n'.join (OO00000O0OOO0O000 )#line:86
-def center_text (OOOOO0O00OOOO0OOO ):#line:87
-    OOO000OO00OO0OOOO =shutil .get_terminal_size ().columns #line:88
-    OO00OO0O0O0OOO0O0 =[OO0OOO0000OO00OOO .center (OOO000OO00OO0OOOO )for OO0OOO0000OO00OOO in OOOOO0O00OOOO0OOO .split ('\n')]#line:89
-    return '\n'.join (OO00OO0O0O0OOO0O0 )#line:90
 def load_settings ():#line:91
     os .system ("cls")#line:92
     print (f"{LIGHT_BLUE}[1] Default Jitter")#line:93
@@ -134,15 +124,11 @@ def monitor_settings (O000OO00OOOO00OOO ):#line:147
     return O000OO00OOOO00OOO #line:148
 def wait_for_controller ():#line:149
     while pygame .joystick .get_count ()==0 :#line:150
-        clear_screen ()#line:151
-        display_banner (move_right ,move_left ,move_up ,move_down )#line:152
-        time .sleep (1 )#line:153
+        time .sleep (0.7 )#line:153
         pygame .joystick .quit ()#line:154
         pygame .joystick .init ()#line:155
     OOO0OOOO0OOO0OOOO =pygame .joystick .Joystick (0 )#line:156
     OOO0OOOO0OOO0OOOO .init ()#line:157
-    clear_screen ()#line:158
-    display_banner (move_right ,move_left ,move_up ,move_down )#line:159
     print (f"\n{LIGHT_WHITE}                   Works For {YELLOW}Xbox {LIGHT_WHITE}+ {LIGHT_PURPLE}Ps4/5                             {LIGHT_CYAN}LT + LR{LIGHT_WHITE} or {LIGHT_PURPLE}L1 + L2\033[0m")#line:160
     print (f"\n{LIGHT_WHITE}                                                 Project By \033[1;32m@yyLevi\033[0m")#line:161
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:162
