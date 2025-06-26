@@ -157,17 +157,17 @@ try :#line:164
  controller =wait_for_controller ()#line:169
  while True :#line:170
     for event in pygame .event .get ():#line:171
-      if pygame .joystick .get_count ()==0 :#line:175
+      if pygame .joystick .get_count () > 0 :#line:175
        aim =controller .get_axis (4 )#line:178
        shoot =controller .get_axis (4 )#line:179
        if aim >0.0 and shoot >0.0 :#line:180
         controller_call ()#line:181
-    if int (time .time ())%2 ==0 :#line:182
+       if int (time .time ())%2 ==0 :#line:182
         updated_settings =monitor_settings (current_settings )#line:183
-        if updated_settings !=current_settings :#line:184
+       if updated_settings !=current_settings :#line:184
             move_right ,move_left ,move_up ,move_down =updated_settings #line:185
             current_settings =updated_settings #line:186
             display_banner (move_right ,move_left ,move_up ,move_down )#line:187
-    time .sleep (time_sleep )#line:188
+      time .sleep (time_sleep )#line:188
 except KeyboardInterrupt :#line:189
  os .system ("cls")
