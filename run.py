@@ -157,15 +157,10 @@ try :#line:164
  controller =wait_for_controller ()#line:169
  while True :#line:170
     for event in pygame .event .get ():#line:171
-        if event .type ==pygame .QUIT :#line:172
-            pygame .quit ()#line:173
-            exit ()#line:174
-    if pygame .joystick .get_count ()==0 :#line:175
-        pygame .quit ()#line:176
-        exit ()#line:177
-    aim =controller .get_axis (4 )#line:178
-    shoot =controller .get_axis (4 )#line:179
-    if aim >0.0 and shoot >0.0 :#line:180
+      if pygame .joystick .get_count ()==0 :#line:175
+       aim =controller .get_axis (4 )#line:178
+       shoot =controller .get_axis (4 )#line:179
+       if aim >0.0 and shoot >0.0 :#line:180
         controller_call ()#line:181
     if int (time .time ())%2 ==0 :#line:182
         updated_settings =monitor_settings (current_settings )#line:183
