@@ -162,7 +162,7 @@ try :#line:164
       if pygame .joystick .get_count () > 0 :#line:175
        aim =controller .get_axis (4 )#line:178
        shoot =controller .get_axis (4 )#line:179
-       if aim >0.0 and shoot > DEADZONE :#line:180
+       if aim >0.0 and shoot > response_time :#line:180
         controller_call ()#line:181
        if int (time .time ()) > 0 :#line:182
         updated_settings =monitor_settings (current_settings )#line:183
