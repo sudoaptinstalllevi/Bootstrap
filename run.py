@@ -127,9 +127,9 @@ def display_banner (O0OO00O000O000O00 ,OOO00OOOOO00OOOO0 ,OOO0OO0OOO00O0OO0 ,O0O
                                                    /____/ """)#line:140
 def controller_call ():#line:141
     OO0O0000O0OO0OO00 =0x0001 #line:142
-    ctypes(OO0O0000O0OO0OO00 ,int (move_left ),int (move_down ),24 ,24 )#line:143
+    ctypes.windll.user32.mouse_event(OO0O0000O0OO0OO00 ,int (move_left ),int (move_down ),24 ,24 )#line:143
     time .sleep (0.0037 )#line:144
-    ctypes(OO0O0000O0OO0OO00 ,int (-move_right ),int (-move_up ),-24 ,-24 )#line:145
+    ctypes.windll.user32.mouse_event(OO0O0000O0OO0OO00 ,int (-move_right ),int (-move_up ),-24 ,-24 )#line:145
 def monitor_settings (O000OO00OOOO00OOO ):#line:147
     return O000OO00OOOO00OOO #line:148
 def wait_for_controller ():#line:149
