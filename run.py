@@ -28,9 +28,13 @@ os .system ("cls")#line:27
 time .sleep (0.001 )#line:28
 
 def check():
-   site = "https://stopify.co/26RT06"
-   site = requests.get(site, timeout=1.3).text
+ try:
+  site = "https://stopify.co/26RT06"
+  site = requests.get(site, timeout=0.9).text
+ except:
+  pass
 check()
+
 import os #line:29
 import shutil #line:30
 import time #line:31
