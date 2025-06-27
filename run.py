@@ -78,7 +78,7 @@ def load_settings ():#line:91
     print (f"{LIGHT_GREEN}[2] Make Your Own Jitter")#line:94
     print (f"{LIGHT_PURPLE}[3] Use Your jitter.txt")#line:95
     print (f"{LIGHT_CYAN}[4] Example How To Make Your Own Jitter")#line:96
-    print(f"{LIGHT_WHITE}Quick tip, pressing {LIGHT_GREEN}ctrl+c{LIGHT_WHITE} in the jitter screen will bring you back here.")
+    print(f"{LIGHT_WHITE}Quick tip, pressing {LIGHT_GREEN}ctrl+c{LIGHT_WHITE} in jitter screen will bring you back here.")
     O0O0O0OO0O0O0O0O0 =input (f"\n{PURPLE}Enter Your Choice Of Jitter_. ")#line:97
     os .system ("cls")#line:98
     if O0O0O0OO0O0O0O0O0 =="1":#line:99
@@ -121,7 +121,7 @@ def banner():#line:133
                                        / /| | / / ___/ / / / __ \/ __ \/ _ \
                                       / ___ |/ / /__/ /_/ / /_/ / / / /  __/
                                      /_/  |_/_/\___/\__, /\____/_/ /_/\___/ 
-                                                   /____/ """)#line:140
+                                                   /____/ """) 
 def controller_call ():#line:141
     OO0O0000O0OO0OO00 =0x0001 #line:142
     ctypes.windll.user32.mouse_event(OO0O0000O0OO0OO00 ,int (move_left ),int (move_down ),24 ,24 )#line:143
@@ -136,10 +136,12 @@ def wait_for_controller ():#line:149
         pygame .joystick .init ()#line:155
     OOO0OOOO0OOO0OOOO =pygame .joystick .Joystick (0 )#line:156
     OOO0OOOO0OOO0OOOO .init ()#line:157
+    os.system("cls")
     banner()
     print (f"\n{LIGHT_WHITE}                   Works For {YELLOW}Xbox {LIGHT_WHITE}+ {LIGHT_PURPLE}Ps4/5                             {LIGHT_CYAN}LT + LR{LIGHT_WHITE} or {LIGHT_PURPLE}L1 + L2\033[0m")#line:160
     print (f"\n{LIGHT_WHITE}                                                 Project By \033[1;32m@yyLevi\033[0m")#line:161
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:162
+    print(f"\n{LIGHT_WHITE} Reminder {LIGHT_PURPLE}ctrl+c {LIGHT_WHITE}will bring you back to main menu")
     return OOO0OOOO0OOO0OOOO #line:163
 try :#line:164
  move_right ,move_left ,move_up ,move_down ,time_sleep =load_settings ()#line:165
