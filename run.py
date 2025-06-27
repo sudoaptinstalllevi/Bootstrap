@@ -32,9 +32,6 @@ os .environ ['PYGAME_HIDE_SUPPORT_PROMPT']='1'#line:32
 import pygame #line:33
 os .system ("cls")#line:37
 
-def reload():
-   os.system("cls")
-
 def load_settings ():#line:91
     os .system ("cls")#line:92
     print (f"{LIGHT_BLUE}[1] Default Jitter")#line:93
