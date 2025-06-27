@@ -67,8 +67,8 @@ def load_settings ():#line:91
        OOOO0O0O00O0O00O0 =float (input (f"{LIGHT_BLUE}enter any number to move the mouse up etc. 20: You're Choice "))#line:122
        OO0O00O0OOO00OOO0 =float (input (f"{LIGHT_GREEN}enter any number to move the mouse left etc. 20: You're Choice "))#line:123
        OO0O0O0OOOOOOO0OO =float (input (f"{LIGHT_PURPLE}enter any number to move the mouse right etc. 20: You're Choice "))#line:124
-       O0OO0OOO0OO000O00 =float (input (f"{LIGHT_CYAN}enter any number to move the mouse down etc. 24: You're Choice "))#line:125
-       O0000OOO00O00OO0O =float (input (f"{YELLOW}enter the speed of how fast the jitter goes, etc. 0.004: You're Choice "))#line:126
+       O0OO0OOO0OO000O00 =float (input (f"{LIGHT_CYAN}enter any number to move the mouse down etc. 20: You're Choice "))#line:125
+       O0000OOO00O00OO0O =float (input (f"{YELLOW}enter the speed of how fast the jitter goes, etc. 0.0034: You're Choice "))#line:126
        return OOOO0O0O00O0O00O0 ,OO0O00O0OOO00OOO0 ,OO0O0O0OOOOOOO0OO ,O0OO0OOO0OO000O00 ,O0000OOO00O00OO0O #line:127
       except ValueError :#line:128
          print ("restarting wrong input.")#line:129
