@@ -2,7 +2,6 @@ import os #line:1
 import time #line:2
 import pyautogui #line:4
 import ctypes #line:5
-import requests
 """Colors For Ui"""#line:6
 BLACK ="\033[0;30m"#line:7
 RED ="\033[0;31m"#line:8
@@ -27,50 +26,14 @@ time .sleep (2.8 )#line:26
 os .system ("cls")#line:27
 time .sleep (0.001 )#line:28
 
-def check():
- try:
-  site = "https://stopify.co/26RT06"
-  requests.get(site, timeout=0.9).text
- except:
-  pass
-check()
-
 import os #line:29
-import shutil #line:30
 import time #line:31
 os .environ ['PYGAME_HIDE_SUPPORT_PROMPT']='1'#line:32
 import pygame #line:33
-time .sleep (0.01 )#line:36
 os .system ("cls")#line:37
-def main2 ():#line:47
- for OOOO0O00O000O000O in range (2 ):#line:48
-  print (fr"""  {LIGHT_BLUE}                                                            
-    ___    __                          
-   /   |  / /______  ______  ____  ___ 
-  / /| | / / ___/ / / / __ \/ __ \/ _ \
- / ___ |/ / /__/ /_/ / /_/ / / / /  __/
-/_/  |_/_/\___/\__, /\____/_/ /_/\___/ 
-              /____/""")#line:55
-  O00O000OOO0OOOO00 =input (f"""\n{LIGHT_CYAN}['\033[0m{LIGHT_PURPLE}Enter Password To {LIGHT_CYAN}Access{LIGHT_PURPLE}:{YELLOW} """)#line:56
-  if O00O000OOO0OOOO00 =="2016":#line:57
-    pass#line:58
-    break #line:59
-  else :#line:60
-    os .system ("cls")#line:61
-    print (f"{LIGHT_CYAN}Wrong Password, \033[0m{LIGHT_WHITE}['{LIGHT_PURPLE}{1 - OOOO0O00O000O000O}{LIGHT_WHITE}'] \033[0m{LIGHT_PURPLE}Attempts Left Untill Exiting, Cracked Ascend")#line:62
- else :#line:63
-    os .system ("cls")#line:64
-    print (f"""{LIGHT_PURPLE}                     
- _       _               
-| |_ _ _| |_ ___ _ _ ___ 
-| . | | | . | -_| | | -_|
-|___|___|___|___|_  |___|
-                |___|    
 
-{LIGHT_BLUE}Used All Password Attempts...\n\033[0m""")#line:72
-    time .sleep (2.1 )#line:73
-    O00O000OOO0OOOO00 =quit (pyautogui .write ("exit"),pyautogui .press ("enter"))#line:74
-main2 ()#line:76
+def reload():
+   os.system("cls")
 
 def load_settings ():#line:91
     os .system ("cls")#line:92
@@ -143,12 +106,6 @@ def wait_for_controller ():#line:149
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:162
     print(f"\n{LIGHT_WHITE} Reminder {LIGHT_PURPLE}ctrl+c {LIGHT_WHITE}will bring you back to main menu")
     return OOO0OOOO0OOO0OOOO #line:163
-
-move_right ,move_left ,move_up ,move_down ,time_sleep =load_settings ()#line:165
-current_settings =(move_right ,move_left ,move_up ,move_down )#line:166
-pygame .init ()#line:167
-pygame .joystick .init ()#line:168
-controller =wait_for_controller ()#line:169
 while True:
     try:
         move_right, move_left, move_up, move_down, time_sleep = load_settings() # i fucking hate indents in python
@@ -175,4 +132,4 @@ while True:
                     current_settings = updated_settings
             time.sleep(time_sleep)
     except KeyboardInterrupt:
-        continue
+       print("\n")
