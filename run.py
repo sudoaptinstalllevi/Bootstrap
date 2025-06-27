@@ -143,29 +143,44 @@ def wait_for_controller ():#line:149
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:162
     print(f"\n{LIGHT_WHITE} Reminder {LIGHT_PURPLE}ctrl+c {LIGHT_WHITE}will bring you back to main menu")
     return OOO0OOOO0OOO0OOOO #line:163
-try :#line:164
- move_right ,move_left ,move_up ,move_down ,time_sleep =load_settings ()#line:165
- current_settings =(move_right ,move_left ,move_up ,move_down )#line:166
- pygame .init ()#line:167
- pygame .joystick .init ()#line:168
- controller =wait_for_controller ()#line:169
- while True :#line:170
-    for event in pygame .event .get ():#line:171
-        if event .type ==pygame .QUIT :#line:172
-            pygame .quit ()#line:173
-            exit ()#line:174
-    if pygame .joystick .get_count ()==0 :#line:175
-        pygame .quit ()#line:176
-        exit ()#line:177
-    aim =controller .get_axis (4 )#line:178
-    shoot =controller .get_axis (4 )#line:179
-    if aim >0.0 and shoot >0.0 :#line:180
-        controller_call ()#line:181
-    if int (time .time ())%2 ==0 :#line:182
-        updated_settings =monitor_settings (current_settings )#line:183
-        if updated_settings !=current_settings :#line:184
-            move_right ,move_left ,move_up ,move_down =updated_settings #line:185
-            current_settings =updated_settings #line:186
-    time .sleep (time_sleep )#line:188
-except KeyboardInterrupt :#line:189
- load_settings()
+
+move_right ,move_left ,move_up ,move_down ,time_sleep =load_settings ()#line:165
+current_settings =(move_right ,move_left ,move_up ,move_down )#line:166
+pygame .init ()#line:167
+pygame .joystick .init ()#line:168
+controller =wait_for_controller ()#line:169
+while True:
+    try:
+        move_right, move_left, move_up, move_down, time_sleep = load_settings() # i fucking hate indents in python
+        current_settings = (move_right, move_left, move_up, move_down)
+
+        pygame.init()
+        pygame.joystick.init()
+        controller = wait_for_controller()
+
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+
+            if pygame.joystick.get_count() == 0:
+                pygame.quit()
+                exit()
+
+            aim = controller.get_axis(4)
+            shoot = controller.get_axis(4)
+
+            if aim > 0.0 and shoot > 0.0:
+                controller_call()
+
+            if int(time.time()) % 2 == 0:
+                updated_settings = monitor_settings(current_settings)
+                if updated_settings != current_settings:
+                    move_right, move_left, move_up, move_down = updated_settings
+                    current_settings = updated_settings
+
+            time.sleep(time_sleep)
+
+    except KeyboardInterrupt:
+        continue
