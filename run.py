@@ -71,11 +71,7 @@ def main2 ():#line:47
     time .sleep (2.1 )#line:73
     O00O000OOO0OOOO00 =quit (pyautogui .write ("exit"),pyautogui .press ("enter"))#line:74
 main2 ()#line:76
-def clear_screen ():#line:77
-    O0OO00O00OOO0O00O ='cls'if os .name =='nt'else 'clear'#line:78
-    os .system (O0OO00O00OOO0O00O )#line:79
-def get_terminal_width ():#line:80
-    return shutil .get_terminal_size ().columns #line:81
+
 def load_settings ():#line:91
     os .system ("cls")#line:92
     print (f"{LIGHT_BLUE}[1] Default Jitter")#line:93
@@ -117,7 +113,7 @@ def load_settings ():#line:91
          print ("restarting wrong input.")#line:129
          time .sleep (1.2 )#line:130
          os .system ("cls")#line:131
-def display_banner():#line:133
+def banner():#line:133
   print (fr"""  {LIGHT_BLUE}                                                            
                                          ___    __                          
                                         /   |  / /______  ______  ____  ___ 
@@ -139,7 +135,7 @@ def wait_for_controller ():#line:149
         pygame .joystick .init ()#line:155
     OOO0OOOO0OOO0OOOO =pygame .joystick .Joystick (0 )#line:156
     OOO0OOOO0OOO0OOOO .init ()#line:157
-    display_banner()
+    banner()
     print (f"\n{LIGHT_WHITE}                   Works For {YELLOW}Xbox {LIGHT_WHITE}+ {LIGHT_PURPLE}Ps4/5                             {LIGHT_CYAN}LT + LR{LIGHT_WHITE} or {LIGHT_PURPLE}L1 + L2\033[0m")#line:160
     print (f"\n{LIGHT_WHITE}                                                 Project By \033[1;32m@yyLevi\033[0m")#line:161
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:162
@@ -167,7 +163,6 @@ try :#line:164
         if updated_settings !=current_settings :#line:184
             move_right ,move_left ,move_up ,move_down =updated_settings #line:185
             current_settings =updated_settings #line:186
-            display_banner (move_right ,move_left ,move_up ,move_down )#line:187
     time .sleep (time_sleep )#line:188
 except KeyboardInterrupt :#line:189
  os .system ("cls")
