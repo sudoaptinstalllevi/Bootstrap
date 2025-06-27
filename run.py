@@ -153,34 +153,26 @@ while True:
     try:
         move_right, move_left, move_up, move_down, time_sleep = load_settings() # i fucking hate indents in python
         current_settings = (move_right, move_left, move_up, move_down)
-
         pygame.init()
         pygame.joystick.init()
         controller = wait_for_controller()
-
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     exit()
-
             if pygame.joystick.get_count() == 0:
                 pygame.quit()
                 exit()
-
             aim = controller.get_axis(4)
             shoot = controller.get_axis(4)
-
             if aim > 0.0 and shoot > 0.0:
                 controller_call()
-
             if int(time.time()) % 2 == 0:
                 updated_settings = monitor_settings(current_settings)
                 if updated_settings != current_settings:
                     move_right, move_left, move_up, move_down = updated_settings
                     current_settings = updated_settings
-
             time.sleep(time_sleep)
-
     except KeyboardInterrupt:
         continue
