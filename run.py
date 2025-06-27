@@ -78,8 +78,8 @@ def load_settings ():#line:91
     print (f"{LIGHT_GREEN}[2] Make Your Own Jitter")#line:94
     print (f"{LIGHT_PURPLE}[3] Use Your jitter.txt")#line:95
     print (f"{LIGHT_CYAN}[4] Example How To Make Your Own Jitter")#line:96
-    print(f"{LIGHT_WHITE}Quick tip, pressing {LIGHT_GREEN}ctrl+c{LIGHT_WHITE} in jitter screen the will bring you back here.")
-    O0O0O0OO0O0O0O0O0 =input (f"\n{PURPLE}Enter Your Choice Of Jitter_. ")#line:97
+    print(f"{LIGHT_WHITE}Quick tip, pressing {LIGHT_GREEN}ctrl+c{LIGHT_WHITE} in the jitter screen will bring you back here.")
+    O0O0O0OO0O0O0O0O0 =input (f"\n{LIGHT_PURPLE}Enter Your Choice Of Jitter{YELLOW}__>__ {LIGHT_CYAN} ")#line:97
     os .system ("cls")#line:98
     if O0O0O0OO0O0O0O0O0 =="1":#line:99
      return (20 ,20 ,20 ,20 ,0.0034 )#line:100
