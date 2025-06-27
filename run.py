@@ -52,8 +52,8 @@ def main2 ():#line:47
 /_/  |_/_/\___/\__, /\____/_/ /_/\___/ 
               /____/""")#line:55
   O00O000OOO0OOOO00 =input (f"""\n{LIGHT_CYAN}['\033[0m{LIGHT_PURPLE}Enter Password To {LIGHT_CYAN}Access{LIGHT_PURPLE}:{YELLOW} """)#line:56
-  if O00O000OOO0OOOO00 =="squ":#line:57
-    print ("")#line:58
+  if O00O000OOO0OOOO00 =="2016":#line:57
+    pass#line:58
     break #line:59
   else :#line:60
     os .system ("cls")#line:61
