@@ -101,7 +101,7 @@ def wait_for_controller ():#line:149
     print (f"\n{LIGHT_WHITE}                   Works For {YELLOW}Xbox {LIGHT_WHITE}+ {LIGHT_PURPLE}Ps4/5                             {LIGHT_CYAN}LT + LR{LIGHT_WHITE} or {LIGHT_PURPLE}L1 + L2\033[0m")#line:160
     print (f"\n{LIGHT_WHITE}                                                 Project By \033[1;32m@yyLevi\033[0m")#line:161
     print (f"                                                ['{YELLOW}Jitter Activated'\033[0m]")#line:162
-    print(f"\n{LIGHT_WHITE} Reminder {LIGHT_PURPLE}ctrl+c {LIGHT_WHITE}will bring you back to main menu")
+    print(f"\n{LIGHT_WHITE}Reminder {LIGHT_PURPLE}ctrl+c {LIGHT_WHITE}will bring you back to main menu")
     return OOO0OOOO0OOO0OOOO #line:163
 while True:
     try:
