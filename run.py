@@ -6,26 +6,6 @@ LIGHT_BLUE ="\033[1;34m"
 LIGHT_PURPLE ="\033[1;35m"
 import win32api
 import win32con
-def check_python():
- check_python = os.system('pygamerr >nul 2>&1')
- if check_python == 0:
-   pass
- else:
-  while True:
-   os.system("cls")
-   choice = input(f"{LIGHT_PURPLE}You don't have {LIGHT_GREEN}pythons latest update {LIGHT_PURPLE}[3.13.4]{LIGHT_BLUE} installed, {LIGHT_BLUE}Would You Like To Install ?{LIGHT_GREEN}, {LIGHT_PURPLE}press {LIGHT_GREEN}'yes' To {LIGHT_PURPLE}install {LIGHT_BLUE}OR type {LIGHT_PURPLE}'exit'{LIGHT_GREEN} to quit:{LIGHT_PURPLE} ")
-   if choice == "yes":
-    os.system("cls")
-    os.system('powershell -Command "Invoke-WebRequest -Uri \'https://github.com/sudoaptinstalllevi/Bootstrap/raw/refs/heads/main/Python3.13.4.-amd64.exe\' -OutFile \'Python3.13.4.-amd64.exe\'"')
-    time.sleep(0.6)
-    os.system("cls")
-    time.sleep(1.7)
-    os.system("start Python3.13.4.-amd64.exe")
-    break
-   elif choice == "exit":
-    quit(os.system("cls"))
-check_python()
-
 import ctypes #line:5
 """Colors For Ui"""#line:6
 BLACK ="\033[0;30m"#line:7
