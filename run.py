@@ -27,7 +27,7 @@ print("""
 
 def fucking_shake():
     ctypes.windll.user32.mouse_event(want_to_fucking_jitter, 20, 20)
-    time.sleep(0.0037)
+    time.sleep(0.0036)
     ctypes.windll.user32.mouse_event(want_to_fucking_jitter, -20, -20)
 while True:
  pygame.event.pump()
@@ -35,4 +35,4 @@ while True:
  set_on_aim = need.get_axis(4)
  if set_on_aim > 0.0 or (r6_mouse):
     fucking_shake()
-    time.sleep(0.0037)
+    time.sleep(0.0036)
